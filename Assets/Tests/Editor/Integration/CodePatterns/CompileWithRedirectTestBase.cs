@@ -1,11 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using FastScriptReload.Editor.Compilation;
 using FastScriptReload.Runtime;
 using ImmersiveVRTools.Runtime.Common;
-using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.TestTools;
@@ -14,12 +12,12 @@ using Assert = UnityEngine.Assertions.Assert;
 namespace FastScriptReload.Tests.Editor.Integration.CodePatterns
 {
     public delegate void AfterDetourTest(CompileResult compileResult);
-    
+
     public abstract class CompileWithRedirectTestBase : IPrebuildSetup
     {
         protected static void TestCompileAndDetour(string filePath)
             => TestCompileAndDetour(filePath, (compileResult) => { });
-        
+
         protected static void TestCompileAndDetour(string filePath, AfterDetourTest afterDetourTest)
         {
             var originalSourceCode = File.ReadAllText(filePath);
@@ -79,7 +77,7 @@ namespace FastScriptReload.Tests.Editor.Integration.CodePatterns
             var dispatcher = new GameObject("DispatcherInstance").AddComponent<UnityMainThreadDispatcher>();
             return DynamicAssemblyCompiler.Compile(new List<string> { filePath }, dispatcher);
         }
-        
+
         protected static string ResolveFullTestFilePath(string relativePath)
         {
             return @$"{Directory.GetCurrentDirectory()}\Assets\Tests\{relativePath}";

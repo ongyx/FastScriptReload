@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using NUnit.Framework;
-using UnityEngine.TestTools;
 using FastScriptReload.Editor.Compilation.CodeRewriting;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using NUnit.Framework;
+using UnityEngine.TestTools;
 
 namespace FastScriptReload.Tests.Editor.Integration.CodePatterns
 {
@@ -514,8 +514,10 @@ namespace FastScriptReload.Tests.Editor.Integration.CodePatterns
             yield return null;
         }
 
-        private List<SyntaxTree> CombineTrees(params string[] files) {
-            return files.Select((it, i) => {
+        private List<SyntaxTree> CombineTrees(params string[] files)
+        {
+            return files.Select((it, i) =>
+            {
                 var path = Path.Combine(_tempPath, $"PartialClass{i}.cs");
                 File.WriteAllText(path, it);
                 return CSharpSyntaxTree.ParseText(it, path: path);

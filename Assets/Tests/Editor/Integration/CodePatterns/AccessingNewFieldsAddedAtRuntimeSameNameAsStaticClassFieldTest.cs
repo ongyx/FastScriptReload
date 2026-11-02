@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using FastScriptReload.Tests.Runtime.Integration.CodePatterns;
-using UnityEngine;
 using UnityEngine.TestTools;
 
 namespace FastScriptReload.Tests.Editor.Integration.CodePatterns

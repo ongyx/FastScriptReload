@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Linq;
-using System.Reflection;
 using FastScriptReload.Tests.Runtime.Integration.CodePatterns;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.TestTools;
 
 namespace FastScriptReload.Tests.Editor.Integration.CodePatterns
@@ -22,15 +19,15 @@ namespace FastScriptReload.Tests.Editor.Integration.CodePatterns
             {
                 instance.TestInstanceFieldTypeRewritten();
             });
-            
-            AssertDetourConfirmed(typeof(AccessingIdentifierNamedSameAsMethod), nameof(instance.TestInstanceFieldTypeRewritten), 
+
+            AssertDetourConfirmed(typeof(AccessingIdentifierNamedSameAsMethod), nameof(instance.TestInstanceFieldTypeRewritten),
                 (o) => o.ToString() == patchedTypeName,
                 "Value should be set after compilation"
             );
 
             yield return null;
         }
-        
+
         [UnityTest]
         public IEnumerator TestAccessingSameNamedVariableNotChanged_StandardCompilation_PropertyAccessInCallNotReplaced()
         {
@@ -40,12 +37,12 @@ namespace FastScriptReload.Tests.Editor.Integration.CodePatterns
             {
                 instance.TestAccessingSameNamedVariableNotChanged();
             });
-            
-            AssertDetourConfirmed(typeof(AccessingIdentifierNamedSameAsMethod), nameof(instance.TestAccessingSameNamedVariableNotChanged), 
+
+            AssertDetourConfirmed(typeof(AccessingIdentifierNamedSameAsMethod), nameof(instance.TestAccessingSameNamedVariableNotChanged),
                 (r) => (bool)r == true,
                 "Value should be set after compilation"
             );
-            
+
             yield return null;
         }
     }
