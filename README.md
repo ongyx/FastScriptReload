@@ -1,8 +1,10 @@
 ﻿[![Documentation](https://img.shields.io/badge/docs-blue.svg)](https://fastscriptreload.com/projects/fast-script-reload/documentation)
 [![Video Quick Start](https://img.shields.io/badge/video_tutorial-green.svg)](https://www.youtube.com/watch?v=ElzvL8M-tYw)
-[![Discord](https://img.shields.io/discord/1054303923743227925?label=Chat)](https://discord.gg/wBKuEAsKAq)
-[![License: MIT](https://img.shields.io/badge/Donate-red.svg)](https://www.patreon.com/FastScriptReload)
 
+> [!note]
+> Disclaimer:
+> This is a fork of the original [Fast Script Reload](https://github.com/handzlikchris/FastScriptReload) with changes specific to Unity 6.3 LTS+.
+> This repository is not affliated with or endorsed by Chris Handzlik / Immersive VR Tools.
 
 **Are you tired of waiting for full domain-reload and script compilation every time you make a small code change?**
 
@@ -23,31 +25,15 @@ And you don't have to adjust your code either, just import.
 Works with any code editor.
 
 ## Quickstart
-1) Download [latest FSR version](https://github.com/handzlikchris/FastScriptReload/releases/download/1.4-rc1/Fast.Script.Reload.unitypackage) and import to Unity
-> You can also install via package manager. Window -> Package Manager -> + -> Add package from Git url:
-> https://github.com/handzlikchris/FastScriptReload.git?path=Assets
-
-> Pulling other branches/commits can be done by appending branch name, eg https://github.com/handzlikchris/FastScriptReload.git?path=Assets#features/ai-code-rewrite-fixes
-3) Play
-3) Make Code Change
-4) See results
+1. Naviagte to Window -> Package Manager -> + -> Add package from Git url.
+    - `https://github.com/ongyx/FastScriptReload.git?path=Assets`
+2. Enter Play mode.
+3. Make changes to your code.
+4. See results.
 
 **It's that simple.**
 
 [Quick start video created by Matt@SpeedTutor](https://www.youtube.com/watch?v=ElzvL8M-tYw)
-
-# Unity Asset Store Best Seller
-I was really chuffed to see FSR selling over 1000 copies on [Asset Store](https://assetstore.unity.com/packages/tools/utilities/fast-script-reload-239351?aid=1100ltZSe&pubref=github) in February - propelling it to #1 best-selling for a few days and keeping on first page for most of the month.
-
-Gaining reviews like:
-> **Goosebumps and tears of joy**
->
-> Felt like I was underwater and that I can breathe again. Just buy this stuff for any serious project. Working around the limitations is just worth it.
-
-## Hot-Reload on device / Live Script Reload
-You can use same hot reload functionality in actual builds / on device. Iterate quickly on deployed Android APK / standalone windows build (exe).
-
-> It's a standalone, paid extension asset, if you'd like to support the product - [please consider grabbing a copy on Unity Asset Store](https://assetstore.unity.com/packages/tools/utilities/live-script-reload-on-device-hot-reload-239380?aid=1100ltZSe&pubref=fsr-github-lsr)
 
 ## One-off custom code executions on Hot-Reload
 When you need to set the stage to test your feature out.
@@ -121,7 +107,6 @@ There are some other minor limitations, please consult full list
 - editor mode support **(DONE, added with 1.4)**
 - better compiler support to workaround limitations
 
-
 ### FAQ
 - My changes no longer automatically compile / reload
 > You probably allowed tool to change auto-reload to 'disabled' and have forgotten about it.
@@ -139,13 +124,6 @@ There are some other minor limitations, please consult full list
 
 To fix please go to `FastScripReload\Examples\Point\Point.prefab` and search for 'Point' shader.
 
-### Building Hot Reload for Unity - blog posts about technical approach (with code)
-I find FSR approach to hot reload very interesting (taking about being biased :)). I'm breaking down technical approach in a blog post series. You can find all about it here:
-
-[1) Building hot reload functionality](https://immersivevrtools.com/Blog/how-to-build-hot-reload-functionality-for-unity) | [Download Example Project Code](_github~/building-hot-reload-for-unity-blog-posts-example-code/01-simple-approach.zip)
-
-[2) Building hot reload for Unity builds / running directly on device](https://immersivevrtools.com/Blog/how-to-build-unity-hot-reload-on-device) | [Download Example Project Code](_github~/building-hot-reload-for-unity-blog-posts-example-code/02-hot-reload-on-device.zip)
-
 ## Credits & Thanks
 - [Mono Mod](https://github.com/MonoMod/MonoMod) and [Harmony](https://github.com/pardeike/Harmony) - which provide runtime code detour that's at the core of hot reload approach.
 - [CatlikeCoding](https://www.youtube.com/c/CatlikeCoding) - example scene code
@@ -157,15 +135,4 @@ That'd be really cool! There are few things you can do **that make huge differen
 ## Rave about FSR to other game devs!
 Spread the word, let other devs know what it is, why is it cool and how it helps build your game.
 I'm sure once they try it they'll stay with us!
-
-## Help building it
-Ping me on [Discord](https://discord.gg/wBKuEAsKAq) if you've got some time on your hands and would like to contribute!
-
-Doesn't have to be coding - there's a ton of stuff that can be done.
-Giving feedback on features, reporting issues, helping others  get started or just chatting and helping build FSR community. All that helps a lot!
-
-## Become a patron
-I'd love to continue spending most of my time making FSR better, as a indie dev however I need to balance that with paid client work. You can chip in to show your appreciation!
-
-**[Support FSR by becoming a patron!](https://www.patreon.com/FastScriptReload)**
 

@@ -1,9 +1,9 @@
 {
-    "name": "com.handzlikchris.fastscriptreload",
-    "version": "1.8.0",
+    "name": "com.ongyx.fastscriptreload",
+    "version": "1.8.1",
     "displayName": "Fast Script Reload",
-    "description": "Hot Reload implementation for Unity. Iterate on code insanely fast without breaking play session. Supports any editor. 1. Play 2. Make change 3. See results",
-    "unity": "2022.3",
+    "description": "Patched fork of the Hot Reload implementation for Unity, originally by Chris Handzlik. Iterate on code insanely fast without breaking play session. Supports any editor. 1. Play 2. Make change 3. See results",
+    "unity": "6000.3",
     "documentationUrl": "https://fastscriptreload.com/projects/fast-script-reload/documentation",
     "keywords": [
         "Hot Reload",
@@ -12,9 +12,8 @@
         "Workflow Tool"
     ],
     "author": {
-        "name": "Chris Handzlik",
-        "email": "chris@fastscriptreload.com",
-        "url": "https://fastscriptreload.com"
+        "name": "Ong Yong Xin",
+        "email": "ongyongxin2020@gmail.com"
     },
     "samples": [
         {
