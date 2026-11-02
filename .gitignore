@@ -5,6 +5,7 @@
 /UserSettings
 *.csproj
 *.sln
+*.slnx
 *.apk
 *.DotSettings
 *.vsconfig

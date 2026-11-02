@@ -830,7 +830,10 @@ CustomPolling - (experimental) watches files by manual polling for changes, slow
 
         public static void SetCommonMaterialsShader(ShadersMode newShaderModeValue)
         {
-            var rootToolFolder = AssetPathResolver.GetAssetFolderPathRelativeToScript(ScriptableObject.CreateInstance(typeof(FastScriptReloadWelcomeScreen)), 1);
+            var welcomeScreen = ScriptableObject.CreateInstance<FastScriptReloadWelcomeScreen>();
+            var rootToolFolder = AssetPathResolver.GetAssetFolderPathRelativeToScript(welcomeScreen, 1);
+            UnityEngine.Object.DestroyImmediate(welcomeScreen);
+
             if (rootToolFolder.Contains("/Scripts"))
             {
                 rootToolFolder = rootToolFolder.Replace("/Scripts", ""); //if nested remove that and go higher level
